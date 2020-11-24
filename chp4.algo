@@ -1,0 +1,16 @@
+ALGORITHM inser sort
+VAR
+    arr:ARRAY_OF_INTEGER[10]
+    i, j, sort: INTEGER
+BEGIN
+    
+FOR i FROM 1 TO 9 DO
+    sort:= arr[i]
+    j:= i-1
+    WHILE (j >= 0 && arr[j] > sort) DO
+    arr[j+1]:=arr[j]
+    j:= j-1
+    END_WHILE
+    arr[j+1]:= sort
+END_FOR
+END
